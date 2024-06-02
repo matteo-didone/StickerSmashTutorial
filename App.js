@@ -14,6 +14,19 @@ export default function App() {
   const [showAppOptions, setShowAppOptions] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
+  // Define functions here
+  const onReset = () => {
+    setShowAppOptions(false);
+  };
+
+  const onAddSticker = () => {
+    // Implement this later
+  };
+
+  const onSaveImageAsync = async () => {
+    // Implement this later
+  };
+
   const pickImageAsync = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
       allowsEditing: true,
@@ -26,18 +39,6 @@ export default function App() {
     } else {
       alert('You did not select any image.');
     }
-
-    const onReset = () => {
-      setShowAppOptions(false);
-    };
-
-    const onAddSticker = () => {
-      // we will implement this later
-    };
-
-    const onSaveImageAsync = async () => {
-      // we will implement this later
-    };
   };
 
   return (
