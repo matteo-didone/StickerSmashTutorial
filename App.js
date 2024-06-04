@@ -67,21 +67,13 @@ export default function App() {
     }
   };
 
-  const imageRef = useRef();
-
-  if (status === null) {
-    requestPermission();
-  }
-
   return (
     <GestureHandlerRootView style={styles.container}>
       <View style={styles.imageContainer}>
-        <View ref={imageRef} collapsable={false}>
           <ImageViewer
             placeholderImageSource={PlaceholderImage}
             selectedImage={selectedImage}
           />
-        </View>
         {pickedEmoji && (
           <EmojiSticker imageSize={40} stickerSource={pickedEmoji} />
         )}
