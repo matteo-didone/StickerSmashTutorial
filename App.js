@@ -1,11 +1,10 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
 import * as ImagePicker from 'expo-image-picker';
 import { useState } from 'react';
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import * as MediaLibrary from 'expo-media-library';
 import { captureRef } from 'react-native-view-shot';
-
+import { StyleSheet, View,  Platform  } from 'react-native';
 
 import Button from './components/Button';
 import ImageViewer from './components/ImageViewer';
